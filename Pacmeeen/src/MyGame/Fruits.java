@@ -41,10 +41,13 @@ public class Fruits extends GameObject {
 			setReleaseTimer(-1);
 			pause = 200;
 		}
-		if(pause>0) {
+		if(pause>1) {
 			pause--;
 		}
-		else if(pause == 0) {
+		else if(pause == 1) {
+			pause = -1;
+		}
+		else if(pause == -1) {
 			release();
 		}
 	}
